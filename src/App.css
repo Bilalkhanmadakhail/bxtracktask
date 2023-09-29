@@ -3,10 +3,13 @@
 body {
   font-family: 'reg'; 
   margin: 0;
+  overflow-x: hidden;
   background-color: #F4F4EF;
   padding: 0;
 }
-
+.large-dot {
+  width: 10px; /* Adjust the width as needed */
+}
 @font-face {
   font-family: 'bold';
   src: url('../src/fonts/Switzer-Bold.ttf') format('truetype'); 
@@ -30,7 +33,7 @@ body {
 
 .slider {
   display: flex;
-  width: 100% !important;
+  /* width: 100% !important; */
   top: 200px !important;
   /* position: absolute; */
   z-index: 50;
@@ -56,24 +59,42 @@ body {
 
 
 
-.dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
 
+
+
+.selectedd {
+  border: 2px solid #ff6347;
+   /* Add your desired border style */
+}
+/* Add these styles to your CSS or update the existing styles */
+
+/* Regular dot style */
 .dot {
-  width: 8px;
-  height: 8px;
-  margin: 0 5px;
-  background-color: #bbb;
+  width: 10px; /* Adjust the width as needed */
+  height: 10px; /* Adjust the height as needed */
+  margin: 0 5px; /* Adjust the margin as needed */
+  background-color: #ccc; /* Adjust the background color as needed */
   border-radius: 50%;
-  cursor: pointer;
+  transition: width 0.3s ease-in-out;
 }
 
-.dot.active {
-  width: 12px;
-  height: 12px;
-  background-color: black;
+/* Selected dot style */
+.dot.selected {
+  background-color: #333; /* Adjust the background color for the selected dot */
 }
 
+/* Large dot style (for the second dot) */
+.dot.large-dot {
+  width: 20px; /* Adjust the width for the large dot */
+  height: 20px; /* Adjust the height for the large dot */
+}
+
+/* Current dot style (based on the currentLeftmostIndex) */
+.dot.current-dot {
+  width: 15px; /* Adjust the width for the current dot */
+  height: 15px; /* Adjust the height for the current dot */
+  background-color: transparent; /* Make the background transparent */
+  border: 6px solid black; /* Add a black border */
+  border-radius: 50%; /* Keep the border radius for a circular shape */
+  box-sizing: border-box; /* Include the border in the box size */
+}
