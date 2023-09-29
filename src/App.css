@@ -5,6 +5,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: #F4F4EF;
+  width: 100%;
   padding: 0;
 }
 .large-dot {
@@ -34,7 +35,7 @@ body {
 .slider {
   display: flex;
   /* width: 100% !important; */
-  top: 200px !important;
+  /* top: 200px !important; */
   /* position: absolute; */
   z-index: 50;
   
