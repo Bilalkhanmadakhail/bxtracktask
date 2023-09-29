@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+
+
+body {
+  font-family: 'reg'; 
+  margin: 0;
+  background-color: #F4F4EF;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'bold';
+  src: url('../src/fonts/Switzer-Bold.ttf') format('truetype'); 
+}
+@font-face {
+  font-family: 'med';
+  src: url('../src/fonts/Switzer-Medium.ttf') format('truetype'); 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'reg';
+  src: url('../src/fonts/Switzer-Regular.ttf') format('truetype'); 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.slider-container {
+  position: relative;
+  padding: 30px 70px 0px 70px;
+  width: 100% !important;
+}
+
+.slider {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100% !important;
+  top: 200px !important;
+  /* position: absolute; */
+  z-index: 50;
+  
+}
+
+.slide {
+  width: 240px !important; 
+  background-color: #EDECE3;
+  height: 350px !important;
+  margin-right: 10px; /* Add some margin between images */
+  cursor: pointer;
+}
+
+.slide:hover {
+  border: 2px solid #4caf50; /* Add a border on hover */
+}
+.imagesld{
+  margin:20px auto 0 auto;
+  width: 200px !important;
+  height: 260px !important;
+}
+
+
+
+.dots {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dot.active {
+  width: 12px;
+  height: 12px;
+  background-color: black;
 }
+
