@@ -49,12 +49,12 @@ const RoomsScreen = () => {
     'Room Feature 6',
   ];
   const descriptions = [
-    'Lorem ipsum dolor sit amet coii adipiscing elit 1',
-    'Lorem ipsum dolor sit amet coii adipiscing elit 2',
-    'Lorem ipsum dolor sit amet coii adipiscing elit 3',
-    'Lorem ipsum dolor sit amet coii adipiscing elit 4',
-    'Lorem ipsum dolor sit amet coii adipiscing elit 5',
-    'Lorem ipsum dolor sit amet coii adipiscing elit 6',
+    'Lorem ipsum dolor sit amet coii  1',
+    'Lorem ipsum dolor sit amet coii adt 2',
+    'Lorem ipsum dolor sit amet coii adi 3',
+    'Lorem ipsum dolor sit amet coii adi 4',
+    'Lorem ipsum dolor sit amet coii adi 5',
+    'Lorem ipsum dolor sit amet coii adi 6',
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isImageClicked, setIsImageClicked] = useState(false);
@@ -174,37 +174,41 @@ const RoomsScreen = () => {
         ))}
       </div>
     </div>
-    <div className="second flex mx-20 md:hidden  ">
+    <div className="second flex sm:mx-20 mx-5 md:hidden  ">
       <div>
-        <img src={statue} className=""/>
+        <img src={statue} className="sm:h-auto h-[500px]"/>
       </div>
       <div className=" mt-14">
 
-      <h1 className="font-normal md:text-[30px] sm:text-[20px]  lg:text-[35px] xl:text-[40px] xl:leading-[40px]">
+      <h1 className="font-normal md:text-[30px] text-[20px]  lg:text-[35px] xl:text-[40px] xl:leading-[40px]">
               Rooms
             </h1>
-            <p className="font-reg xl:text-[18px] md:text-[14px] lg:text-[16px]  lg:mt-2 xl:mt-5 leading-[25px] opacity-70">
+            <p className="font-reg xl:text-[18px] sm:text-[13px] text-[12px] md:text-[14px] lg:text-[16px]  lg:mt-2 xl:mt-5 leading-[25px] opacity-70">
               MADE FOR SOPHISTICATED RELAXATION
             </p>
       </div>
       </div>
-    <div className="absolute bg-[#EDECE3] w-[100%]  top-[200px]  md:hidden block">
+    <div className="absolute bg-[#EDECE3] w-[100%] m  sm:top-[200px] top-[150px]  md:hidden block">
     <img
         src={images[currentIndex]}
         alt={`Image ${currentIndex + 1}`}
         className={`m-auto w-[70%] ${isImageClicked ? 'opacity-30' : ''}`}
         onClick={handleImageClicked}
       />
-      <div className="absolute left-0 bottom-28 z-50 right-0 text-black p-2 text-center">
+      <div className="absolute left-0 bottom-36 z-50 right-0 text-black p-2 text-center">
         <div>
-          {isImageClicked ? 'Room Feature ' : captions[currentIndex]}
+          
         </div>
+        {isImageClicked ? 'Room Feature ' : captions[currentIndex]}
         {isImageClicked && (
           <div className="opacity-70">
             {descriptions[currentIndex]}
           </div>
         )}
       </div>
+      <div className="sm:ml-28 ssm:ml-24 sxm:ml-24 ml-20">
+          {isImageClicked ? 'Room Feature ' : captions[currentIndex]}
+        </div>
       <img
         src={right}
         alt="Left Arrow"
@@ -218,7 +222,16 @@ const RoomsScreen = () => {
         onClick={goToNext}
       />
     </div>
-    
+    <div className="absolute md:hidden sm:mt-28 ssm:mt-56 sxm:mt-44 mt-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {images.map((_, index) => (
+          <div
+            key={index}
+            className={`h-4 w-4 rounded-full bg-gray-300 ${
+              index === currentIndex ? 'bg-gray-600' : ''
+            }`}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };
