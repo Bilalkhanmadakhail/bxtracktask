@@ -69,7 +69,7 @@ const RoomsScreen = () => {
           />
         </div>
       </div>
-<div className="slider px-14 ml-40 mt-[398px] z-10 opacity-70 bg-[#F4F4EF] w-[100px] h-[100px] border-2  flex justify-between transition-transform duration-500 ease-in-out absolute  ">
+<div className="slider px-14 ml-40 mt-[398px] z-10 opacity-70 bg-[#F4F4EF] w-[100px] h-[100px]   flex justify-between transition-transform duration-500 ease-in-out absolute  ">
 
 </div>
       <div className="slider px-14 ml-5 w-[100%] flex justify-between transition-transform duration-500 ease-in-out absolute  ">
