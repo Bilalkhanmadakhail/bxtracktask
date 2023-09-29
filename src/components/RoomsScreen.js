@@ -43,7 +43,7 @@ const RoomsScreen = () => {
   return (
     <div className="container mx-auto overflow-hidden">
       <div className="flex ml-7 h-[100vh] overflow-hidden mt-2 pt-5 w-[100%] ">
-        <div className="w-[70%] flex ">
+        <div className="w-[63%] flex ">
           <div className="ml-28 ">
             <img className="w-[366px] h-[650px]" src={statue} alt="Statue" />
           </div>
